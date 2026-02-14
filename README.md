@@ -47,6 +47,18 @@ git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/Pape
 git clone https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
 ```
 
+**若报错 `module "PaperMod" not found`**：说明主题未正确安装。请先关闭对 `themes/PaperMod` 的占用，在项目根目录执行：
+
+```powershell
+# 删除错误或空的主题目录（若无法删除，先关闭 Cursor 再试）
+Remove-Item -Recurse -Force themes\PaperMod -ErrorAction SilentlyContinue
+
+# 重新添加主题（二选一）
+git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+# 或不用 submodule，直接克隆：
+# git clone https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+```
+
 ## 本地开发
 
 ```bash
@@ -72,6 +84,18 @@ hugo
 ```bash
 npm run build
 ```
+
+## GitHub Pages 部署
+
+本仓库已配置 GitHub Actions：**推送到 `main` 分支会自动构建并部署到 GitHub Pages**。
+
+**首次使用需在 GitHub 上做一次设置：**
+
+1. 打开仓库 **Settings** → 左侧 **Pages**。
+2. 在 **Build and deployment** 里，**Source** 选择 **GitHub Actions**。
+3. 保存后，每次 `git push origin main` 会触发部署；完成后博客地址为：
+
+   **https://emmaaaa111.github.io/blog/**
 
 ## 新建文章
 
