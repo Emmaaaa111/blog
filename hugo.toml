@@ -1,0 +1,18 @@
+baseURL = "https://example.com/"
+title = "My Blog"
+languageCode = "zh-CN"
+theme = "PaperMod"
+
+[params]
+  description = "我的个人博客"
+  author = "Author"
+
+[menu]
+  [[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "文章"
+    url = "/posts/"
+    weight = 2

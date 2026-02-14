@@ -1,0 +1,11 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hugo 静态博客",
+  "scripts": {
+    "dev": "hugo server -D",
+    "build": "hugo",
+    "preview": "hugo server -D"
+  }
+}
