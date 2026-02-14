@@ -1,7 +1,7 @@
 baseURL = "https://example.com/"
 title = "My Blog"
 languageCode = "zh-CN"
-theme = "PaperMod"
+theme = "hugo-PaperMod-master"
 
 [params]
   description = "我的个人博客"
